@@ -25,6 +25,12 @@ header {
   background-color: slategray;
 }
 
+.container {
+  border: 3px solid black;
+  height: 100%;
+  margin: auto;
+}
+
 .logo {
   cursor: pointer;
 }
@@ -73,20 +79,11 @@ button:hover {
 }
 
 .column {
-}
-
-.left {
-  width: 35%;
-  background-color: grey;
+  width: 80%;
+  background-color: black;
   height: 100%;
   margin: 25px;
   padding: 10px;
-}
-
-.right {
-  width: 65%;
-  background-color: black;
-  height: 100%;
 }
 
 #search-book {
@@ -99,4 +96,15 @@ button:hover {
 .book-content {
   border: 3px solid black;
   height: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.book-card {
+  text-align: center;
+  color: white;
+}
+
+#search-history {
+  background-color: black;
 }

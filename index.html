@@ -10,34 +10,28 @@
 </head>
 
 <body>
+  <header>
+    <img class="logo" src="./images/rt-52.png" alt="logo">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">My Reading Plans</a></li>
+        <li><a href="#">My Books</a></li>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
-    <header>
-      <img class="logo" src="./images/rt-52.png" alt="logo">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">My Reading Plans</a></li>
-          <li><a href="#">My Books</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="book-content">
-      <div class="column left">
-        <form id="new-search-form">
-          <div class="search-bar">
-            <input id="search-book" placeholder="Find your next book..." type="text" name="search-term" />
-            <button class="button" id="search-button">Search</button>
-          </div>
-        </form>
-        <div class="column right">
+    <div class="search-form">
+      <form id="new-search-form">
+        <div class="search-bar">
+          <input id="search-book" placeholder="Find your next book..." type="text" name="search-term" />
+          <button class="button" id="search-button">Search</button>
         </div>
-        <div class="books-container">
-          <div class="searches">
-            <ul id="search-history"></ul>
-          </div>
-
-        </div>
-      </div>
+      </form>
     </div>
+    <div class="searches">
+      <ul id="search-history"></ul>
+    </div>
+    <div class="right" id="display-book"></div>
   </div>
 
   <script type="module" src="./src/index.js"></script>

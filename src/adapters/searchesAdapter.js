@@ -1,4 +1,5 @@
 import Books from "../components/books/books.js";
+import Book from "../components/books/book.js";
 
 class SearchesAdapter {
   constructor() {
@@ -18,7 +19,7 @@ class SearchesAdapter {
       body: JSON.stringify({ text: formData })
     })
       .then(resp => resp.json())
-      .then(data => new Books(data));
+      .then(data => new Book(data));
   }
 }
 
