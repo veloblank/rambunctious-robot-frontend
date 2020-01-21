@@ -1,6 +1,7 @@
+import BooksAdapter from "../adapters/booksAdapter.js";
 class App {
   constructor() {
-    this.adapter = new BookAdapter();
+    this.adapter = new BooksAdapter();
   }
 }
 
