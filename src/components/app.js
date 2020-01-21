@@ -1,7 +1,8 @@
-import BooksAdapter from "../adapters/booksAdapter.js";
+import Searches from "./searches/searches.js";
+
 class App {
   constructor() {
-    this.adapter = new BooksAdapter();
+    this.searches = new Searches();
   }
 }
 
