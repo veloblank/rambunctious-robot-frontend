@@ -1,26 +1,23 @@
 class SearchesAdapter {
   constructor() {
-    this.baseUrl = "https://localhost:3000/api/v1";
+    this.baseUrl = "http://localhost:3000/api/v1/searches";
   }
 
   getSearches() {
-    return fetch(this.baseUrl + "/searches").then(resp => resp.json());
+    return fetch(this.baseUrl).then(resp => resp.json());
   }
 
-  createSearch(formData) {
-    let data = formData;
-
-    let options = {
+  createNewSearch(formData) {
+    return fetch(this.baseUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ text: data })
-    };
-
-    fetch(this.baseUrl + "/searches", options)
+      body: JSON.stringify({ text: formData })
+    })
       .then(resp => resp.json())
       .then(data => console.log(data));
   }
 }
+
+export default SearchesAdapter;
