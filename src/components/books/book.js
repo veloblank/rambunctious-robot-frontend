@@ -4,13 +4,16 @@ class Book {
   }
 
   renderBook(data) {
+    let addBookBtn = document.createElement("button");
     let displayDiv = document.getElementById("display-book");
     let bookDiv = document.createElement("div");
-    bookDiv.classList.add("book-card")
+    bookDiv.classList.add("book-card");
     let bookImg = document.createElement("img");
     let bookTitle = document.createElement("h2");
     let bookAuthor = document.createElement("p");
     let words = document.createElement("p");
+    addBookBtn.innerHTML = `<button data='${data.id}' class='button' id='add-book'>Add Book</button>`;
+    console.log(addBookBtn);
     bookImg.src = data.large_img;
     bookImg.width = 400;
     bookTitle.innerText = data.title;
@@ -20,6 +23,7 @@ class Book {
     bookDiv.appendChild(bookTitle);
     bookDiv.appendChild(bookAuthor);
     bookDiv.appendChild(words);
+    bookDiv.appendChild(addBookBtn);
 
     displayDiv.appendChild(bookDiv);
     this.id = data.id;
