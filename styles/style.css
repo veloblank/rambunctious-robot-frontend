@@ -102,9 +102,22 @@ button:hover {
 
 .book-card {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 #search-history {
   background-color: black;
+}
+
+button.delete-search {
+  background-color: rgb(0, 26, 255);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 28px;
+}
+
+button.delete-search:hover {
+  background-color: rgba(223, 175, 20, 0.8);
 }

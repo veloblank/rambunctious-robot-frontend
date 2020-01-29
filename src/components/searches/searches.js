@@ -6,12 +6,21 @@ class Searches {
     this.searches = [];
     this.adapter = new SearchesAdapter();
     this.fetchAndLoadSearches();
-    this.bindEventListeners();
   }
 
   bindEventListeners() {
     let searchForm = document.getElementById("new-search-form");
+    let delSearch = document.querySelectorAll(".delete-search");
+    delSearch.forEach(result => {
+      result.addEventListener("click", e => this.removeSearchResult(e));
+    });
     searchForm.addEventListener("submit", this.createSearch.bind(this));
+  }
+
+  removeSearchResult(e) {
+    let delSearch = document.querySelector("#search-history");
+    let targetLi = e.target.parentElement;
+    delSearch.removeChild(targetLi);
   }
 
   createSearch(event) {
@@ -37,10 +46,13 @@ class Searches {
     searchHistory.innerText = ""; //empties previous content so it doesn't duplicate <li's>
     this.searches.forEach(search => {
       let searchLi = document.createElement("li");
+      searchLi.setAttribute("data", search.id);
       searchLi.innerText = search.text;
+      searchLi.innerHTML += "<button class='delete-search'>&times;</button>";
       searchHistory.append(searchLi);
     });
     this.searches = [];
+    this.bindEventListeners();
   }
 }
 
