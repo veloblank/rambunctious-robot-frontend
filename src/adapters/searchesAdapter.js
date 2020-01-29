@@ -10,6 +10,12 @@ class SearchesAdapter {
     return fetch(this.baseUrl).then(resp => resp.json());
   }
 
+  removeSearch(target) {
+    return fetch(this.baseUrl + `/${target}`, {
+      method: "DELETE"
+    }).then(resp => resp.json());
+  }
+
   createNewSearch(formData) {
     return fetch(this.baseUrl, {
       method: "POST",

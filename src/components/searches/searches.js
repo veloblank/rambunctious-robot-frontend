@@ -20,7 +20,9 @@ class Searches {
   removeSearchResult(e) {
     let delSearch = document.querySelector("#search-history");
     let targetLi = e.target.parentElement;
+    let targetId = parseInt(targetLi.attributes.data.value);
     delSearch.removeChild(targetLi);
+    this.adapter.removeSearch(targetId);
   }
 
   createSearch(event) {
