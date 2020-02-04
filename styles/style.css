@@ -12,7 +12,6 @@ button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1em;
-  color: whitesmoke;
   text-decoration: none;
 }
 
@@ -26,6 +25,7 @@ header {
 }
 
 .container {
+  display: flex;
   border: 3px solid black;
   height: 100%;
   margin: auto;
@@ -67,6 +67,7 @@ button {
 
 button:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
 }
 
 .search-bar {
@@ -80,7 +81,6 @@ button:hover {
 
 .column {
   width: 80%;
-  background-color: black;
   height: 100%;
   margin: 25px;
   padding: 10px;
@@ -91,6 +91,23 @@ button:hover {
   font-size: 1.25em;
   height: 35px;
   width: 65%;
+}
+
+.search-form {
+  width: 50%;
+}
+
+.results{
+  flex
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  width: 50%;
+  float: right;
 }
 
 .book-content {
@@ -106,7 +123,7 @@ button:hover {
 }
 
 #search-history {
-  background-color: black;
+  color: black;
 }
 
 button.delete-search {
