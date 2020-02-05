@@ -93,21 +93,17 @@ button:hover {
   width: 65%;
 }
 
-.search-form {
+.results {
+  display: flex;
+}
+
+.left {
   width: 50%;
-}
-
-.results{
-  flex
-}
-
-.left{
   float: left;
 }
 
-.right{
+.right {
   width: 50%;
-  float: right;
 }
 
 .book-content {
@@ -118,7 +114,6 @@ button:hover {
 }
 
 .book-card {
-  text-align: center;
   color: black;
 }
 
