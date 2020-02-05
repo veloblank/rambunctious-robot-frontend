@@ -1,6 +1,13 @@
 class Book {
   constructor(data) {
+    this.clearBookDiv();
     this.renderBook(data);
+  }
+
+  clearBookDiv() {
+    let displayDiv = document.getElementById("display-book");
+    displayDiv.innerHTML = "";
+    debugger;
   }
 
   renderBook(data) {
@@ -13,7 +20,6 @@ class Book {
     let bookAuthor = document.createElement("p");
     let words = document.createElement("p");
     addBookBtn.innerHTML = `<button data='${data.id}' class='button' id='add-book'>Add Book</button>`;
-    console.log(addBookBtn);
     bookImg.src = data.large_img;
     bookImg.width = 400;
     bookTitle.innerText = data.title;

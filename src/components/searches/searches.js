@@ -28,10 +28,12 @@ class Searches {
   createSearch(event) {
     event.preventDefault();
     let searchedBook = document.getElementById("search-book");
-    this.adapter
-      .createNewSearch(searchedBook.value)
-      .then(() => this.fetchAndLoadSearches());
-    searchedBook.value = "";
+    if (searchedBook.value) {
+      this.adapter
+        .createNewSearch(searchedBook.value)
+        .then(() => this.fetchAndLoadSearches());
+      searchedBook.value = "";
+    }
   }
 
   fetchAndLoadSearches() {
