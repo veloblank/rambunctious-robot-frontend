@@ -24,7 +24,10 @@ class Book {
     bookImg.width = 400;
     bookTitle.innerText = data.title;
     bookAuthor.innerText = data.author;
-    words.innerText = `Between ${data.words_low} and ${data.words_high} words.`;
+    let wordsString = `Between ${data.words_low} and ${data.words_high} words.`;
+    wordsString === "Between 0 and 0 words."
+      ? (words.innerText = "Unknown word count.")
+      : (words.innerText = wordsString);
     bookDiv.appendChild(bookImg);
     bookDiv.appendChild(bookTitle);
     bookDiv.appendChild(bookAuthor);
