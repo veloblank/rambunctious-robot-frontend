@@ -139,3 +139,9 @@ button.delete-search {
 button.delete-search:hover {
   background-color: rgba(223, 175, 20, 0.8);
 }
+
+.search-result {
+  margin: 0px 3px 3px;
+  list-style: none;
+  padding-left: 25px;
+}

@@ -50,6 +50,7 @@ class Searches {
     searchHistory.innerText = ""; //empties previous content so it doesn't duplicate <li's>
     this.searches.forEach(search => {
       let searchLi = document.createElement("li");
+      searchLi.classList.add("search-result");
       searchLi.setAttribute("data", search.id);
       searchLi.innerText = search.text;
       searchLi.innerHTML += "<button class='delete-search'>&times;</button>";

@@ -7,7 +7,6 @@ class Book {
   clearBookDiv() {
     let displayDiv = document.getElementById("display-book");
     displayDiv.innerHTML = "";
-    debugger;
   }
 
   renderBook(data) {
