@@ -14,11 +14,14 @@
     <img class="logo" src="./images/rt-52.png" alt="logo">
     <nav>
       <ul class="nav-links">
-        <li><a href="#">My Reading Plan</a></li>
+        <li><a href="#" onclick="showPlan()">My Reading Plan</a></li>
         <li><a href="#">My Books</a></li>
       </ul>
     </nav>
   </header>
+  <div class="hidden" id="reading-plan">
+    Reading Plan:
+  </div>
   <div class="container">
     <div class="left search-form">
       <form id="new-search-form">
@@ -37,7 +40,10 @@
   </div>
 
 
+
+  <script type="text/javascript" src="./src/main.js"></script>
   <script type="module" src="./src/index.js"></script>
+
 </body>
 
 </html>

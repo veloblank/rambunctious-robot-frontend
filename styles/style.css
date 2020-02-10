@@ -145,3 +145,12 @@ button.delete-search:hover {
   list-style: none;
   padding-left: 25px;
 }
+
+#reading-plan {
+  background-color: grey;
+  height: 40px;
+}
+
+.hidden {
+  display: none;
+}
