@@ -18,7 +18,7 @@ class Book {
     let bookTitle = document.createElement("h2");
     let bookAuthor = document.createElement("p");
     let words = document.createElement("p");
-    addBookBtn.innerHTML = `<button data='${data.id}' class='button' id='add-book'>Add Book</button>`;
+    addBookBtn.innerHTML = `<button data='${data.id}' class='button is-success' id='add-book'>Add Book</button>`;
     bookImg.src = data.large_img;
     bookImg.width = 400;
     bookTitle.innerText = data.title;

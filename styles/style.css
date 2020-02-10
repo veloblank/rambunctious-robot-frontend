@@ -62,20 +62,6 @@ header {
   color: black;
 }
 
-button {
-  padding: 9px 8px;
-  background-color: rgb(255, 0, 0);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: whitesmoke;
-}
-
 .search-bar {
   margin: 15px;
   font-size: 22px;
