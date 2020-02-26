@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>52 Weeks to 52 Books</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+		/>
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+		></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>52 Weeks to 52 Books</title>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css'>
-  <script defer src='https://use.fontawesome.com/releases/v5.3.1/js/all.js'></script>
-</head>
+	<body>
+		<header>
+			<img class="logo" src="./images/rt-52.png" alt="logo" />
+			<nav>
+				<ul class="nav-links">
+					<li><a href="#" onclick="showPlan()">My Reading Plan</a></li>
+					<li><a href="#">My Books</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container hidden" id="reading-plan">
+			Reading Plan:
+		</div>
+		<div class="container">
+			<div class="left search-form">
+				<form id="new-search-form">
+					<div class="search-bar">
+						<input
+							id="search-book"
+							placeholder="Find your next book..."
+							type="text"
+							name="search-term"
+						/>
+						<button class="button is-info" id="search-button">Search</button>
+					</div>
+				</form>
+				<div class="results">
+					<div class="left" id="searches">
+						<ul id="search-history"></ul>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<div class="card-content" id="display-book">
+						<div class="book-card">
+							<img src="" alt="" />
+							<h2 id="book-title"></h2>
+							<p id="book-author"></p>
+							<p id="word-count"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<body>
-  <header>
-    <img class="logo" src="./images/rt-52.png" alt="logo">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#" onclick="showPlan()">My Reading Plan</a></li>
-        <li><a href="#">My Books</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container hidden" id="reading-plan">
-    Reading Plan:
-  </div>
-  <div class="container">
-    <div class="left search-form">
-      <form id="new-search-form">
-        <div class="search-bar">
-          <input id="search-book" placeholder="Find your next book..." type="text" name="search-term" />
-          <button class="button is-info" id="search-button">Search</button>
-        </div>
-      </form>
-      <div class="results">
-        <div class="left" id="searches">
-          <ul id="search-history"></ul>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <div class="card-content" id="display-book"></div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <script type="text/javascript" src="./src/main.js"></script>
-  <script type="module" src="./src/index.js"></script>
-
-</body>
-
+		<script type="text/javascript" src="./src/main.js"></script>
+		<script type="module" src="./src/index.js"></script>
+	</body>
 </html>
